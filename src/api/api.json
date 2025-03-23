@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Weather API",
+    "version": "1.0.0",
+    "description": "API for fetching weather forecasts"
+  },
+  "servers": [
+    {
+      "url": "https://BASE-APP-URL"
+    }
+  ],
+  "paths": {
+    "/weather/{location}": {
+      "get": {
+        "summary": "Get the weather forecast for a location",
+        "operationId": "getWeatherForecast",
+        "parameters": [
+          {
+            "name": "location",
+            "in": "path",
+            "required": true,
+            "description": "Location to get the weather forecast",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Weather summary",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "weather": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

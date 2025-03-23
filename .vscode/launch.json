@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python app debug",
+            "type": "debugpy",
+            "python": "venv/bin/python",
+            "request": "launch",
+            "module": "uvicorn",
+            "cwd": "${workspaceFolder}/src/api",
+            "args": [
+                "--host",
+                "0.0.0.0",
+                "app:connex_app"
+            ],
+            "autoStartBrowser": true
+        }
+    ]
+}
